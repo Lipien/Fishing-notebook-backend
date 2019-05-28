@@ -2,6 +2,7 @@ package com.kodilla.fishingnotebook.controller;
 
 import com.kodilla.fishingnotebook.client.ImgwClient;
 import com.kodilla.fishingnotebook.domain.ImgwDto;
+import com.kodilla.fishingnotebook.mapper.ImgwMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,9 @@ public class ImgwController {
 
     @Autowired
     private ImgwClient imgwClient;
+
+    @Autowired
+    private ImgwMapper imgwMapper;
 
     @GetMapping(value = "getHydro")
     public void getHydro() {
