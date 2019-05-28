@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class ImgwDto {
 
     @JsonProperty("id_stacji")
-    private String idStacji;
+    private String id_stacji;
 
     @JsonProperty("stacja")
     private String stacja;

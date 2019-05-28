@@ -1,6 +1,8 @@
 package com.kodilla.fishingnotebook.client;
 
 import com.kodilla.fishingnotebook.domain.ImgwDto;
+import com.kodilla.fishingnotebook.mapper.ImgwMapper;
+import com.kodilla.fishingnotebook.service.DbService;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,6 +26,12 @@ public class ImgwClient {
 
     @Autowired
     private RestTemplate restTemplate;
+
+    @Autowired
+    private DbService dbService;
+
+    @Autowired
+    private ImgwMapper imgwMapper;
 
     public List <ImgwDto> getImgwStations() {
         ImgwDto[] imgwResponse = restTemplate.getForObject(
