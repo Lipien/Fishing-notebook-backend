@@ -29,9 +29,7 @@ public class ImgwController {
 
         List <ImgwDto> hydroData = imgwClient.getImgwStations();
 
-        dbService.saveImgwStations(imgwMapper.mapToImgwList(hydroData));
-
-       /* hydroData.forEach(imgwDto ->
-                System.out.println(imgwDto.getRzeka() + " " + imgwDto.getStanWody()));*/
+        hydroData.forEach((temp) ->
+                dbService.saveImgwStations(imgwMapper.mapToImgw(temp)));
     }
 }
