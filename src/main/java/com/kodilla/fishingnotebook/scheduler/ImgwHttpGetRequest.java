@@ -1,4 +1,4 @@
-package com.kodilla.fishingnotebook;
+package com.kodilla.fishingnotebook.scheduler;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
