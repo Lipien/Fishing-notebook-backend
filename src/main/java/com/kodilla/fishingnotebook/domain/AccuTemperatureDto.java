@@ -12,6 +12,6 @@ import lombok.NoArgsConstructor;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class AccuTemperatureDto {
 
-    @JsonProperty("Temperature")
+    @JsonProperty("Metric")
     private AccuMetricDto accuMetricDto;
 }

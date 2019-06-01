@@ -13,5 +13,5 @@ import lombok.NoArgsConstructor;
 public class AccuMetricDto {
 
     @JsonProperty("Value")
-    private String valueDto;
+    private double valueDto;
 }

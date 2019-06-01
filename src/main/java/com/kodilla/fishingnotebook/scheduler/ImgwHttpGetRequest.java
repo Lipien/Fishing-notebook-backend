@@ -11,8 +11,6 @@ import java.net.URL;
 public class ImgwHttpGetRequest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ImgwHttpGetRequest.class);
-    //@Value("${fishing.api.gethydro.httprequest}")
-    //private static String imgwHttpGet;
 
     public static void sendGetToHydro() throws Exception {
         String url = "http://localhost:8080/v1/hydro/getHydro";

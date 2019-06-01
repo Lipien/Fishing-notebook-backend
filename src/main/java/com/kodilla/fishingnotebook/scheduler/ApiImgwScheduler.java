@@ -10,7 +10,7 @@ public class ApiImgwScheduler {
     @Autowired
     private ImgwHttpGetRequest imgwHttpGetRequest;
 
-   // @Scheduled(fixedDelay = 60000)
+    // @Scheduled(fixedDelay = 60000)
     public void sendGet() throws Exception {
         imgwHttpGetRequest.sendGetToHydro();
     }

@@ -25,25 +25,9 @@ public class Accuweather {
     @Column(name = "HasPrecipitation")
     private String precipitation;
 
-    @Transient
-    private AccuTemperature temperature;
-
+    @Embedded
     @Column(name = "Temperature")
-    private String getTemperature(){
-        return String.valueOf(temperature.getAccuMetric());
-    }
-
-    /*"LocalObservationDateTime": "2019-05-31T14:30:00+02:00",
-    "EpochTime": 1559305800,
-    "WeatherText": "Chmury i słońce",
-    "WeatherIcon": 4,
-    "HasPrecipitation": false,
-    "PrecipitationType": null,
-    "IsDayTime": true,
-    "Temperature": {
-      "Metric": {
-        "Value": 18.7,
-        "Unit": "C",*/
+    public AccuTemperature temperature;
 }
 
 

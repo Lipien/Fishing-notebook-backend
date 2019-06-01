@@ -19,7 +19,7 @@ public class AccuweatherController {
     private AccuweatherClient accuweatherClient;
 
     @Autowired
-      private AccuweatherMapper accuweatherMapper;
+    private AccuweatherMapper accuweatherMapper;
 
     @Autowired
     private DbService dbService;

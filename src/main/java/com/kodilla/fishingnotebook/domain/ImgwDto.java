@@ -21,18 +21,9 @@ public class ImgwDto {
     @JsonProperty("rzeka")
     private String rzeka;
 
-//    private String wojewodztwo;
-
     @JsonProperty("stan_wody")
     private String stanWody;
 
     @JsonProperty("stan_wody_data_pomiaru")
     private String stanWodyDataPomiaru;
-
-/*    private String temperaturaWody;
-    private String temperaturaWodyDataPomiaru;
-    private String zjawiskoLodowe;
-    private String zjawiskoLodoweDataPomiaru;
-    private String zjawiskoZarastania;
-    private String zjawiskoZarastaniaDataPomiaru;*/
 }
