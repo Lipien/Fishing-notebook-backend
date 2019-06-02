@@ -2,6 +2,9 @@ package com.kodilla.fishingnotebook.client;
 
 import com.kodilla.fishingnotebook.config.AccuweatherConfig;
 import com.kodilla.fishingnotebook.domain.AccuweatherDto;
+import com.kodilla.fishingnotebook.domain.Kroscienko.AccuWeatherKroscienkoDto;
+import com.kodilla.fishingnotebook.domain.Lesko.AccuWeatherLesko;
+import com.kodilla.fishingnotebook.domain.Lesko.AccuWeatherLeskoDto;
 import com.kodilla.fishingnotebook.mapper.AccuweatherMapper;
 import com.kodilla.fishingnotebook.service.DbService;
 import lombok.AllArgsConstructor;
@@ -26,18 +29,18 @@ public class AccuweatherClient {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Autowired
+    /*@Autowired
     private DbService dbService;
 
     @Autowired
-    private AccuweatherMapper accuweatherMapper;
+    private AccuweatherMapper accuweatherMapper;*/
 
     @Autowired
     private AccuweatherConfig accuweatherConfig;
 
     public List <AccuweatherDto> getWeather() {
 
-        URI url = UriComponentsBuilder.fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationLesko())
+        URI url = UriComponentsBuilder.fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationGolkowice())
                 .queryParam("apikey", accuweatherConfig.getAccuweatherAppKey())
                 .queryParam("language", accuweatherConfig.getAccuweatherApiLanguage())
                 .build()
@@ -46,6 +49,42 @@ public class AccuweatherClient {
 
         AccuweatherDto[] accuResponse = restTemplate.getForObject(url,
                 AccuweatherDto[].class);
+
+        if (accuResponse != null) {
+            return Arrays.asList(accuResponse);
+        }
+        return new ArrayList <>();
+    }
+
+    public List <AccuWeatherLeskoDto> getWeatherLesko() {
+
+        URI url = UriComponentsBuilder.fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationLesko())
+                .queryParam("apikey", accuweatherConfig.getAccuweatherAppKey())
+                .queryParam("language", accuweatherConfig.getAccuweatherApiLanguage())
+                .build()
+                .encode()
+                .toUri();
+
+        AccuWeatherLeskoDto[] accuResponse = restTemplate.getForObject(url,
+                AccuWeatherLeskoDto[].class);
+
+        if (accuResponse != null) {
+            return Arrays.asList(accuResponse);
+        }
+        return new ArrayList <>();
+    }
+
+    public List <AccuWeatherKroscienkoDto> getWeatherKroscienko() {
+
+        URI url = UriComponentsBuilder.fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationKroscienko())
+                .queryParam("apikey", accuweatherConfig.getAccuweatherAppKey())
+                .queryParam("language", accuweatherConfig.getAccuweatherApiLanguage())
+                .build()
+                .encode()
+                .toUri();
+
+        AccuWeatherKroscienkoDto[] accuResponse = restTemplate.getForObject(url,
+                AccuWeatherKroscienkoDto[].class);
 
         if (accuResponse != null) {
             return Arrays.asList(accuResponse);
