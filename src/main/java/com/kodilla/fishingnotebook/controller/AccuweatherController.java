@@ -1,10 +1,10 @@
 package com.kodilla.fishingnotebook.controller;
 
 import com.kodilla.fishingnotebook.client.AccuweatherClient;
-import com.kodilla.fishingnotebook.domain.AccuweatherDto;
-import com.kodilla.fishingnotebook.domain.Kroscienko.AccuWeatherKroscienkoDto;
-import com.kodilla.fishingnotebook.domain.Lesko.AccuWeatherLeskoDto;
-import com.kodilla.fishingnotebook.mapper.AccuweatherMapper;
+import com.kodilla.fishingnotebook.domain.golkowice.AccuweatherGolkowiceDto;
+import com.kodilla.fishingnotebook.domain.kroscienko.AccuWeatherKroscienkoDto;
+import com.kodilla.fishingnotebook.domain.lesko.AccuWeatherLeskoDto;
+import com.kodilla.fishingnotebook.mapper.AccuweatherMapperGolkowice;
 import com.kodilla.fishingnotebook.mapper.AccuweatherMapperKroscienko;
 import com.kodilla.fishingnotebook.mapper.AccuweatherMapperLesko;
 import com.kodilla.fishingnotebook.service.DbService;
@@ -23,7 +23,7 @@ public class AccuweatherController {
     private AccuweatherClient accuweatherClient;
 
     @Autowired
-    private AccuweatherMapper accuweatherMapper;
+    private AccuweatherMapperGolkowice accuweatherMapperGolkowice;
 
     @Autowired
     private AccuweatherMapperKroscienko accuweatherMapperKroscienko;
@@ -34,13 +34,13 @@ public class AccuweatherController {
     @Autowired
     private DbService dbService;
 
-    @GetMapping(value = "getWeather")
-    public void getWeather() {
+    @GetMapping(value = "getWeatherGolkowice")
+    public void getWeatherGolkowice() {
 
-        List <AccuweatherDto> weatherData = accuweatherClient.getWeather();
+        List <AccuweatherGolkowiceDto> weatherData = accuweatherClient.getWeatherGolkowice();
 
         weatherData.forEach((temp) ->
-                dbService.saveAccuWeather(accuweatherMapper.mapToAccuweather(temp)));
+                dbService.saveAccuWeather(accuweatherMapperGolkowice.mapToAccuweather(temp)));
     }
 
     @GetMapping(value = "getWeatherLesko")

@@ -1,4 +1,4 @@
-package com.kodilla.fishingnotebook.domain.Kroscienko;
+package com.kodilla.fishingnotebook.domain.kroscienko;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

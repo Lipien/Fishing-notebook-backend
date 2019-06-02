@@ -1,4 +1,4 @@
-package com.kodilla.fishingnotebook.domain;
+package com.kodilla.fishingnotebook.domain.lesko;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class AccuweatherDto {
+public class AccuWeatherLeskoDto {
 
     private Long id;
 
@@ -24,5 +24,5 @@ public class AccuweatherDto {
     private String precipitationDto;
 
     @JsonProperty("Temperature")
-    private AccuTemperatureDto accuTemperatureDto;
+    private AccuTemperatureLeskoDto accuTemperatureDto;
 }

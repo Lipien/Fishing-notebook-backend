@@ -1,12 +1,9 @@
 package com.kodilla.fishingnotebook.client;
 
 import com.kodilla.fishingnotebook.config.AccuweatherConfig;
-import com.kodilla.fishingnotebook.domain.AccuweatherDto;
-import com.kodilla.fishingnotebook.domain.Kroscienko.AccuWeatherKroscienkoDto;
-import com.kodilla.fishingnotebook.domain.Lesko.AccuWeatherLesko;
-import com.kodilla.fishingnotebook.domain.Lesko.AccuWeatherLeskoDto;
-import com.kodilla.fishingnotebook.mapper.AccuweatherMapper;
-import com.kodilla.fishingnotebook.service.DbService;
+import com.kodilla.fishingnotebook.domain.golkowice.AccuweatherGolkowiceDto;
+import com.kodilla.fishingnotebook.domain.kroscienko.AccuWeatherKroscienkoDto;
+import com.kodilla.fishingnotebook.domain.lesko.AccuWeatherLeskoDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,16 +26,10 @@ public class AccuweatherClient {
     @Autowired
     private RestTemplate restTemplate;
 
-    /*@Autowired
-    private DbService dbService;
-
-    @Autowired
-    private AccuweatherMapper accuweatherMapper;*/
-
     @Autowired
     private AccuweatherConfig accuweatherConfig;
 
-    public List <AccuweatherDto> getWeather() {
+    public List <AccuweatherGolkowiceDto> getWeatherGolkowice() {
 
         URI url = UriComponentsBuilder.fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationGolkowice())
                 .queryParam("apikey", accuweatherConfig.getAccuweatherAppKey())
@@ -47,8 +38,8 @@ public class AccuweatherClient {
                 .encode()
                 .toUri();
 
-        AccuweatherDto[] accuResponse = restTemplate.getForObject(url,
-                AccuweatherDto[].class);
+        AccuweatherGolkowiceDto[] accuResponse = restTemplate.getForObject(url,
+                AccuweatherGolkowiceDto[].class);
 
         if (accuResponse != null) {
             return Arrays.asList(accuResponse);

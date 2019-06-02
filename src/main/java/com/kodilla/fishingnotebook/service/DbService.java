@@ -1,10 +1,10 @@
 package com.kodilla.fishingnotebook.service;
 
-import com.kodilla.fishingnotebook.domain.Accuweather;
+import com.kodilla.fishingnotebook.domain.golkowice.AccuweatherGolkowice;
 import com.kodilla.fishingnotebook.domain.Imgw;
-import com.kodilla.fishingnotebook.domain.Kroscienko.AccuWeatherKroscienko;
-import com.kodilla.fishingnotebook.domain.Lesko.AccuWeatherLesko;
-import com.kodilla.fishingnotebook.repository.AccuWeatherRepository;
+import com.kodilla.fishingnotebook.domain.kroscienko.AccuWeatherKroscienko;
+import com.kodilla.fishingnotebook.domain.lesko.AccuWeatherLesko;
+import com.kodilla.fishingnotebook.repository.AccuWeatherRepositoryGolkowice;
 import com.kodilla.fishingnotebook.repository.AccuWeatherRepositoryLesko;
 import com.kodilla.fishingnotebook.repository.AccuweatherRepositoryKroscienko;
 import com.kodilla.fishingnotebook.repository.ImgwRepository;
@@ -20,7 +20,7 @@ public class DbService {
     private ImgwRepository imgwRepository;
 
     @Autowired
-    private AccuWeatherRepository accuWeatherRepository;
+    private AccuWeatherRepositoryGolkowice accuWeatherRepositoryGolkowice;
 
     @Autowired
     private AccuweatherRepositoryKroscienko accuweatherRepositoryKroscienko;
@@ -32,8 +32,8 @@ public class DbService {
         return imgwRepository.save(imgw);
     }
 
-    public Accuweather saveAccuWeather(final Accuweather accuweather) {
-        return accuWeatherRepository.save(accuweather);
+    public AccuweatherGolkowice saveAccuWeather(final AccuweatherGolkowice accuweatherGolkowice) {
+        return accuWeatherRepositoryGolkowice.save(accuweatherGolkowice);
     }
 
     public AccuWeatherKroscienko saveAccuWeatherKroscienko(final AccuWeatherKroscienko accuWeatherKroscienko) {

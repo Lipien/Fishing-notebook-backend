@@ -1,4 +1,4 @@
-package com.kodilla.fishingnotebook.domain.Kroscienko;
+package com.kodilla.fishingnotebook.domain.golkowice;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,7 +10,6 @@ import javax.persistence.Embeddable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Embeddable
-public class AccuMetricKroscienko {
-
+public class AccuMetricGolkowice {
     private double value;
 }

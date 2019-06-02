@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Component
 public class AccuweatherConfig {
+
     @Value("${accuweather.api.prod}")
     private String accuweatherApiEndpoint;
 

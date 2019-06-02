@@ -1,6 +1,6 @@
 package com.kodilla.fishingnotebook.mapper;
 
-import com.kodilla.fishingnotebook.domain.Kroscienko.*;
+import com.kodilla.fishingnotebook.domain.kroscienko.*;
 import org.springframework.stereotype.Component;
 
 @Component

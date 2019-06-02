@@ -1,4 +1,4 @@
-package com.kodilla.fishingnotebook.domain.Lesko;
+package com.kodilla.fishingnotebook.domain.kroscienko;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,8 +11,8 @@ import javax.persistence.Embedded;
 @NoArgsConstructor
 @AllArgsConstructor
 @Embeddable
-public class AccuTemperatureLesko {
+public class AccuTemperatureKroscienko {
 
     @Embedded
-    private AccuMetricLesko accuMetric;
+    private AccuMetricKroscienko accuMetricKroscienko;
 }
