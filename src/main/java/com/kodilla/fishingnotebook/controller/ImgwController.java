@@ -24,8 +24,8 @@ public class ImgwController {
     @Autowired
     private DbService dbService;
 
-    @GetMapping(value = "getHydro")
-    public void getHydro() {
+    @GetMapping(value = "getImgw")
+    public void getImgw() {
 
         List <ImgwDto> hydroData = imgwClient.getImgwStations();
 

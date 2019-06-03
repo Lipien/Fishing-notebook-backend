@@ -33,14 +33,17 @@ public class DbService {
     }
 
     public AccuweatherGolkowice saveAccuWeather(final AccuweatherGolkowice accuweatherGolkowice) {
+        accuWeatherRepositoryGolkowice.deleteAllWithQuery();
         return accuWeatherRepositoryGolkowice.save(accuweatherGolkowice);
     }
 
     public AccuWeatherKroscienko saveAccuWeatherKroscienko(final AccuWeatherKroscienko accuWeatherKroscienko) {
+        accuweatherRepositoryKroscienko.deleteAllWithQuery();
         return accuweatherRepositoryKroscienko.save(accuWeatherKroscienko);
     }
 
     public AccuWeatherLesko saveAccuWeatherLesko(final AccuWeatherLesko accuWeatherLesko) {
+        accuWeatherRepositoryLesko.deleteAllWithQuery();
         return accuWeatherRepositoryLesko.save(accuWeatherLesko);
     }
 }

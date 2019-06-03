@@ -8,10 +8,13 @@ import org.springframework.stereotype.Component;
 public class ApiImgwScheduler {
 
     @Autowired
-    private ImgwHttpGetRequest imgwHttpGetRequest;
+    private HttpGetRequesToApi httpGetRequesToApi;
 
-    // @Scheduled(fixedDelay = 60000)
+    @Scheduled(fixedDelay = 60000)
     public void sendGet() throws Exception {
-        imgwHttpGetRequest.sendGetToHydro();
+        httpGetRequesToApi.sendGetToImgw();
+        httpGetRequesToApi.sendGetToAccuweatherLesko();
+        httpGetRequesToApi.sendGetToAccuweatherKroscienko();
+        httpGetRequesToApi.sendGetToAccuweatherGolkowice();
     }
 }
