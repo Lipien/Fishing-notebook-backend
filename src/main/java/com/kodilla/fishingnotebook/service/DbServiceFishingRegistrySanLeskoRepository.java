@@ -26,6 +26,10 @@ public class DbServiceFishingRegistrySanLeskoRepository {
     public void deleteFish(Long id) {
         registrySanLeskoRepository.deleteById(id);
     }
+
+    public SanLeskoRegistry updateFish(final SanLeskoRegistry sanLeskoRegistry) {
+        return registrySanLeskoRepository.save(sanLeskoRegistry);
+    }
 }
 
 

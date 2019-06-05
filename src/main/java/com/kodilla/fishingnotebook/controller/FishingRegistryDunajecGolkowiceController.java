@@ -33,4 +33,9 @@ public class FishingRegistryDunajecGolkowiceController {
     public void deleteDunajecGolkowiceRegistry(@RequestParam Long id) {
         dbServiceFishingRegistryDunajecGolkowiceRepository.deleteFish(id);
     }
+
+    @PutMapping(value = "updateDunajecGolkowiceRegistry")
+    public DunajecGolkowiceRegistryDto updateDunajecGolkowiceRegistry(@RequestBody DunajecGolkowiceRegistryDto dunajecGolkowiceRegistryDto) {
+        return fishingRegistryDunajecGolkowiceMapper.mapToDunajecGolkowiceDto(dbServiceFishingRegistryDunajecGolkowiceRepository.updateFish(fishingRegistryDunajecGolkowiceMapper.mapToDunajecGolkowice(dunajecGolkowiceRegistryDto)));
+    }
 }

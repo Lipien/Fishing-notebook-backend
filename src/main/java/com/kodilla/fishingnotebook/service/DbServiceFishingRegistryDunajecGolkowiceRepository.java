@@ -26,4 +26,8 @@ public class DbServiceFishingRegistryDunajecGolkowiceRepository {
     public void deleteFish(Long id) {
         registryDunajecGolkowiceRepository.deleteById(id);
     }
+
+    public DunajecGolkowiceRegistry updateFish(final DunajecGolkowiceRegistry dunajecGolkowiceRegistry) {
+        return registryDunajecGolkowiceRepository.save(dunajecGolkowiceRegistry);
+    }
 }
