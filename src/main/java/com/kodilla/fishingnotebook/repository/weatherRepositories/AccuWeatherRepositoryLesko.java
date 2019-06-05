@@ -1,4 +1,4 @@
-package com.kodilla.fishingnotebook.repository;
+package com.kodilla.fishingnotebook.repository.weatherRepositories;
 
 import com.kodilla.fishingnotebook.domain.lesko.AccuWeatherLesko;
 import org.springframework.data.jpa.repository.Modifying;
