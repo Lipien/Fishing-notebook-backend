@@ -13,4 +13,7 @@ public interface RegistryDunajecKroscienkoRepository extends CrudRepository <Dun
 
     @Override
     List <DunajecKroscienkoRegistry> findAll();
+
+    @Override
+    DunajecKroscienkoRegistry save(DunajecKroscienkoRegistry dunajecKroscienkoRegistry);
 }

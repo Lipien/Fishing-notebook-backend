@@ -1,4 +1,4 @@
-package com.kodilla.fishingnotebook.mapper;
+package com.kodilla.fishingnotebook.mapper.accuweather;
 
 import com.kodilla.fishingnotebook.domain.kroscienko.*;
 import org.springframework.stereotype.Component;

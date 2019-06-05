@@ -1,11 +1,11 @@
 package com.kodilla.fishingnotebook.controller;
 
 import com.kodilla.fishingnotebook.domain.registry.DunajecKroscienkoRegistry;
+import com.kodilla.fishingnotebook.domain.registry.DunajecKroscienkoRegistryDto;
+import com.kodilla.fishingnotebook.mapper.registry.FishingRegistryDunajecKroscienkoMapper;
 import com.kodilla.fishingnotebook.service.DbServiceFishingRegistryDunajecKroscienkoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,8 +16,16 @@ public class FishinRegistryDunajecKroscienkoController {
     @Autowired
     DbServiceFishingRegistryDunajecKroscienkoRepository dbServiceFishingRegistryDunajecKroscienkoRepository;
 
+    @Autowired
+    FishingRegistryDunajecKroscienkoMapper fishingRegistryDunajecKroscienkoMapper;
+
     @GetMapping(value = "getDunajecKroscienkoRegistry")
     public List <DunajecKroscienkoRegistry> getDunajecKroscienkoRegistry() {
         return dbServiceFishingRegistryDunajecKroscienkoRepository.getAllFish();
+    }
+
+    @PostMapping(value = "createDunajecKroscienkoRegistry")
+    public void createDunajecKroscienkoRegistry(@RequestBody DunajecKroscienkoRegistryDto dunajecKroscienkoRegistryDto) {
+        dbServiceFishingRegistryDunajecKroscienkoRepository.saveFish(fishingRegistryDunajecKroscienkoMapper.mapToDunajecKroscienko(dunajecKroscienkoRegistryDto));
     }
 }

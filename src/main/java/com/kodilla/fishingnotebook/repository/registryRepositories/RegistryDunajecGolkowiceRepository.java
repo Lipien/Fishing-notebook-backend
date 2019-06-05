@@ -13,4 +13,7 @@ public interface RegistryDunajecGolkowiceRepository extends CrudRepository <Duna
 
     @Override
     List <DunajecGolkowiceRegistry> findAll();
+
+    @Override
+    DunajecGolkowiceRegistry save(DunajecGolkowiceRegistry dunajecGolkowiceRegistry);
 }

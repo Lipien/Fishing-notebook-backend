@@ -18,6 +18,10 @@ public class DbServiceFishingRegistrySanLeskoRepository {
     public List <SanLeskoRegistry> getAllFish() {
         return registrySanLeskoRepository.findAll();
     }
+
+    public SanLeskoRegistry saveFish(final SanLeskoRegistry sanLeskoRegistry) {
+        return registrySanLeskoRepository.save(sanLeskoRegistry);
+    }
 }
 
 

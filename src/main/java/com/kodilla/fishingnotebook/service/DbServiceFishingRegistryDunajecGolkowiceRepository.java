@@ -18,4 +18,8 @@ public class DbServiceFishingRegistryDunajecGolkowiceRepository {
     public List <DunajecGolkowiceRegistry> getAllFish() {
         return registryDunajecGolkowiceRepository.findAll();
     }
+
+    public DunajecGolkowiceRegistry saveFish(final DunajecGolkowiceRegistry dunajecGolkowiceRegistry) {
+        return registryDunajecGolkowiceRepository.save(dunajecGolkowiceRegistry);
+    }
 }

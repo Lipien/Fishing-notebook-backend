@@ -13,4 +13,7 @@ public interface RegistrySanLeskoRepository extends CrudRepository <SanLeskoRegi
 
     @Override
     List <SanLeskoRegistry> findAll();
+
+    @Override
+    SanLeskoRegistry save(SanLeskoRegistry sanLeskoRegistry);
 }

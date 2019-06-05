@@ -18,4 +18,8 @@ public class DbServiceFishingRegistryDunajecKroscienkoRepository {
     public List <DunajecKroscienkoRegistry> getAllFish() {
         return registryDunajecKroscienkoRepository.findAll();
     }
+
+    public DunajecKroscienkoRegistry saveFish(final DunajecKroscienkoRegistry dunajecKroscienkoRegistry) {
+        return registryDunajecKroscienkoRepository.save(dunajecKroscienkoRegistry);
+    }
 }
