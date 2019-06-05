@@ -16,4 +16,7 @@ public interface RegistryDunajecKroscienkoRepository extends CrudRepository <Dun
 
     @Override
     DunajecKroscienkoRegistry save(DunajecKroscienkoRegistry dunajecKroscienkoRegistry);
+
+    @Override
+    void deleteById(Long id);
 }

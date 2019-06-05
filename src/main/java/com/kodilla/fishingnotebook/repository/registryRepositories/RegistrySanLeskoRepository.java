@@ -16,4 +16,7 @@ public interface RegistrySanLeskoRepository extends CrudRepository <SanLeskoRegi
 
     @Override
     SanLeskoRegistry save(SanLeskoRegistry sanLeskoRegistry);
+
+    @Override
+    void deleteById(Long id);
 }

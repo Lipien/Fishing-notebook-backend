@@ -28,4 +28,9 @@ public class FishingRegistryDunajecGolkowiceController {
     public void createDunajecGolkowiceRegistry(@RequestBody DunajecGolkowiceRegistryDto dunajecGolkowiceRegistryDto) {
         dbServiceFishingRegistryDunajecGolkowiceRepository.saveFish(fishingRegistryDunajecGolkowiceMapper.mapToDunajecGolkowice(dunajecGolkowiceRegistryDto));
     }
+
+    @DeleteMapping(value = "deleteDunajecGolkowiceRegistry")
+    public void deleteDunajecGolkowiceRegistry(@RequestParam Long id) {
+        dbServiceFishingRegistryDunajecGolkowiceRepository.deleteFish(id);
+    }
 }

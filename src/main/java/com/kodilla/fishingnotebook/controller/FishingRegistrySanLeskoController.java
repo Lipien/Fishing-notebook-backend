@@ -28,4 +28,9 @@ public class FishingRegistrySanLeskoController {
     public void createSanLeskoRegistry(@RequestBody SanLeskoRegistryDto sanLeskoRegistryDto) {
         dbServiceFishingRegistrySanLeskoRepository.saveFish(fishingRegistrySanLeskoMapper.mapToSanLesko(sanLeskoRegistryDto));
     }
+
+    @DeleteMapping(value = "deleteSanLeskoRegistry")
+    public void deleteSanLeskoRegistry(@RequestParam Long id) {
+        dbServiceFishingRegistrySanLeskoRepository.deleteFish(id);
+    }
 }

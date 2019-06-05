@@ -22,4 +22,8 @@ public class DbServiceFishingRegistryDunajecKroscienkoRepository {
     public DunajecKroscienkoRegistry saveFish(final DunajecKroscienkoRegistry dunajecKroscienkoRegistry) {
         return registryDunajecKroscienkoRepository.save(dunajecKroscienkoRegistry);
     }
+
+    public void deleteFish(Long id) {
+        registryDunajecKroscienkoRepository.deleteById(id);
+    }
 }

@@ -16,4 +16,7 @@ public interface RegistryDunajecGolkowiceRepository extends CrudRepository <Duna
 
     @Override
     DunajecGolkowiceRegistry save(DunajecGolkowiceRegistry dunajecGolkowiceRegistry);
+
+    @Override
+    void deleteById(Long id);
 }
