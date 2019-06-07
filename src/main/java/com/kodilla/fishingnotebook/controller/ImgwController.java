@@ -1,6 +1,7 @@
 package com.kodilla.fishingnotebook.controller;
 
 import com.kodilla.fishingnotebook.client.ImgwClient;
+import com.kodilla.fishingnotebook.configuration.CoreConfiguration;
 import com.kodilla.fishingnotebook.domain.ImgwDto;
 import com.kodilla.fishingnotebook.mapper.ImgwMapper;
 import com.kodilla.fishingnotebook.service.DbService;
@@ -23,6 +24,9 @@ public class ImgwController {
 
     @Autowired
     private DbService dbService;
+
+    @Autowired
+    private CoreConfiguration coreConfiguration;
 
     @GetMapping(value = "getImgw")
     public void getImgw() {
