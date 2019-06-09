@@ -1,4 +1,4 @@
-package com.kodilla.fishingnotebook.domain.kroscienko;
+package com.kodilla.fishingnotebook.domain.accuweather.kroscienko;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

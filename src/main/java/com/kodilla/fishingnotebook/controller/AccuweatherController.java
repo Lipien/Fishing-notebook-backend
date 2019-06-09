@@ -1,9 +1,9 @@
 package com.kodilla.fishingnotebook.controller;
 
 import com.kodilla.fishingnotebook.client.AccuweatherClient;
-import com.kodilla.fishingnotebook.domain.golkowice.AccuweatherGolkowiceDto;
-import com.kodilla.fishingnotebook.domain.kroscienko.AccuWeatherKroscienkoDto;
-import com.kodilla.fishingnotebook.domain.lesko.AccuWeatherLeskoDto;
+import com.kodilla.fishingnotebook.domain.accuweather.golkowice.AccuweatherGolkowiceDto;
+import com.kodilla.fishingnotebook.domain.accuweather.kroscienko.AccuWeatherKroscienkoDto;
+import com.kodilla.fishingnotebook.domain.accuweather.lesko.AccuWeatherLeskoDto;
 import com.kodilla.fishingnotebook.mapper.accuweather.AccuweatherMapperGolkowice;
 import com.kodilla.fishingnotebook.mapper.accuweather.AccuweatherMapperKroscienko;
 import com.kodilla.fishingnotebook.mapper.accuweather.AccuweatherMapperLesko;

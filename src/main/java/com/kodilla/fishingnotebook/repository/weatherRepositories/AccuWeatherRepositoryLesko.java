@@ -1,6 +1,6 @@
 package com.kodilla.fishingnotebook.repository.weatherRepositories;
 
-import com.kodilla.fishingnotebook.domain.lesko.AccuWeatherLesko;
+import com.kodilla.fishingnotebook.domain.accuweather.lesko.AccuWeatherLesko;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

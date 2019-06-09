@@ -1,4 +1,4 @@
-package com.kodilla.fishingnotebook.domain.golkowice;
+package com.kodilla.fishingnotebook.domain.accuweather.lesko;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,6 +10,7 @@ import javax.persistence.Embeddable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Embeddable
-public class AccuMetricGolkowice {
+public class AccuMetricLesko {
+
     private double value;
 }

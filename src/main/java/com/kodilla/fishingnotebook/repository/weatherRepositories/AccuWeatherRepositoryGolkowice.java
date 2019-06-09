@@ -1,6 +1,6 @@
 package com.kodilla.fishingnotebook.repository.weatherRepositories;
 
-import com.kodilla.fishingnotebook.domain.golkowice.AccuweatherGolkowice;
+import com.kodilla.fishingnotebook.domain.accuweather.golkowice.AccuweatherGolkowice;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

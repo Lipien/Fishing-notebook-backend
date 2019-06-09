@@ -1,9 +1,9 @@
 package com.kodilla.fishingnotebook.service;
 
-import com.kodilla.fishingnotebook.domain.golkowice.AccuweatherGolkowice;
+import com.kodilla.fishingnotebook.domain.accuweather.golkowice.AccuweatherGolkowice;
 import com.kodilla.fishingnotebook.domain.Imgw;
-import com.kodilla.fishingnotebook.domain.kroscienko.AccuWeatherKroscienko;
-import com.kodilla.fishingnotebook.domain.lesko.AccuWeatherLesko;
+import com.kodilla.fishingnotebook.domain.accuweather.kroscienko.AccuWeatherKroscienko;
+import com.kodilla.fishingnotebook.domain.accuweather.lesko.AccuWeatherLesko;
 import com.kodilla.fishingnotebook.repository.weatherRepositories.AccuWeatherRepositoryGolkowice;
 import com.kodilla.fishingnotebook.repository.weatherRepositories.AccuWeatherRepositoryLesko;
 import com.kodilla.fishingnotebook.repository.weatherRepositories.AccuweatherRepositoryKroscienko;

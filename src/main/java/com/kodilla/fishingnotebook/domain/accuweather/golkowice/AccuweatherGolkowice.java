@@ -1,4 +1,4 @@
-package com.kodilla.fishingnotebook.domain.lesko;
+package com.kodilla.fishingnotebook.domain.accuweather.golkowice;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,8 +9,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Entity(name = "accuweather_lesko")
-public class AccuWeatherLesko {
+@Entity(name = "accuweather_golkowice")
+public class AccuweatherGolkowice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,5 +27,7 @@ public class AccuWeatherLesko {
 
     @Embedded
     @Column(name = "Temperature")
-    public AccuTemperatureLesko temperature;
+    public AccuTemperatureGolkowice temperature;
 }
+
+

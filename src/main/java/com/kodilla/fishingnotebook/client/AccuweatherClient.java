@@ -1,9 +1,9 @@
 package com.kodilla.fishingnotebook.client;
 
 import com.kodilla.fishingnotebook.config.AccuweatherConfig;
-import com.kodilla.fishingnotebook.domain.golkowice.AccuweatherGolkowiceDto;
-import com.kodilla.fishingnotebook.domain.kroscienko.AccuWeatherKroscienkoDto;
-import com.kodilla.fishingnotebook.domain.lesko.AccuWeatherLeskoDto;
+import com.kodilla.fishingnotebook.domain.accuweather.golkowice.AccuweatherGolkowiceDto;
+import com.kodilla.fishingnotebook.domain.accuweather.kroscienko.AccuWeatherKroscienkoDto;
+import com.kodilla.fishingnotebook.domain.accuweather.lesko.AccuWeatherLeskoDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

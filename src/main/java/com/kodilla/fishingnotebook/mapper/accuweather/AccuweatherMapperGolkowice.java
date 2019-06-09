@@ -1,6 +1,6 @@
 package com.kodilla.fishingnotebook.mapper.accuweather;
 
-import com.kodilla.fishingnotebook.domain.golkowice.*;
+import com.kodilla.fishingnotebook.domain.accuweather.golkowice.*;
 import org.springframework.stereotype.Component;
 
 @Component
