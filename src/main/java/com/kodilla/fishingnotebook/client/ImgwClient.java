@@ -1,6 +1,6 @@
 package com.kodilla.fishingnotebook.client;
 
-import com.kodilla.fishingnotebook.domain.ImgwDto;
+import com.kodilla.fishingnotebook.domain.imgw.ImgwDto;
 import com.kodilla.fishingnotebook.mapper.ImgwMapper;
 import com.kodilla.fishingnotebook.service.DbService;
 import lombok.AllArgsConstructor;

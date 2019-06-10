@@ -1,7 +1,7 @@
 package com.kodilla.fishingnotebook.mapper;
 
-import com.kodilla.fishingnotebook.domain.Imgw;
-import com.kodilla.fishingnotebook.domain.ImgwDto;
+import com.kodilla.fishingnotebook.domain.imgw.Imgw;
+import com.kodilla.fishingnotebook.domain.imgw.ImgwDto;
 import org.springframework.stereotype.Component;
 
 @Component

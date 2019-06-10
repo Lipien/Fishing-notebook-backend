@@ -1,6 +1,6 @@
 package com.kodilla.fishingnotebook.repository;
 
-import com.kodilla.fishingnotebook.domain.Imgw;
+import com.kodilla.fishingnotebook.domain.imgw.Imgw;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.kodilla.fishingnotebook.domain;
+package com.kodilla.fishingnotebook.domain.imgw;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

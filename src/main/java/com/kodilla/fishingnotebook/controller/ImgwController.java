@@ -2,7 +2,7 @@ package com.kodilla.fishingnotebook.controller;
 
 import com.kodilla.fishingnotebook.client.ImgwClient;
 import com.kodilla.fishingnotebook.configuration.CoreConfiguration;
-import com.kodilla.fishingnotebook.domain.ImgwDto;
+import com.kodilla.fishingnotebook.domain.imgw.ImgwDto;
 import com.kodilla.fishingnotebook.mapper.ImgwMapper;
 import com.kodilla.fishingnotebook.service.DbService;
 import org.springframework.beans.factory.annotation.Autowired;
