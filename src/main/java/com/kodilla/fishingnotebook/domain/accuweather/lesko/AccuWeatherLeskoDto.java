@@ -27,4 +27,14 @@ public class AccuWeatherLeskoDto {
 
     @JsonProperty("Temperature")
     private AccuTemperatureLeskoDto accuTemperatureDto;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AccuWeatherLeskoDto that = (AccuWeatherLeskoDto) o;
+
+        return getAccuTemperatureDto().equals(that.getAccuTemperatureDto());
+    }
 }

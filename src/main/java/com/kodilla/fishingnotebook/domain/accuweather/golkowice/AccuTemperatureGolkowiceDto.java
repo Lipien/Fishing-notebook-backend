@@ -14,4 +14,14 @@ public class AccuTemperatureGolkowiceDto {
 
     @JsonProperty("Metric")
     private AccuMetricGolkowiceDto accuMetricGolkowiceDto;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AccuTemperatureGolkowiceDto that = (AccuTemperatureGolkowiceDto) o;
+
+        return getAccuMetricGolkowiceDto().equals(that.getAccuMetricGolkowiceDto());
+    }
 }

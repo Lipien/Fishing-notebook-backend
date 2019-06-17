@@ -36,24 +36,6 @@ public class AccuweatherClient {
     @Autowired
     private AccuweatherConfig accuweatherConfig;
 
-    public List <AccuweatherGolkowiceDto> getWeatherGolkowice() {
-
-        URI url = UriComponentsBuilder.fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationGolkowice())
-                .queryParam("apikey", accuweatherConfig.getAccuweatherAppKey())
-                .queryParam("language", accuweatherConfig.getAccuweatherApiLanguage())
-                .build()
-                .encode()
-                .toUri();
-
-        try {
-            AccuweatherGolkowiceDto[] accuResponse = restTemplate.getForObject(url, AccuweatherGolkowiceDto[].class);
-            return Arrays.asList(ofNullable(accuResponse).orElse(new AccuweatherGolkowiceDto[0]));
-        } catch (RestClientException e) {
-            LOGGER.error(e.getMessage(), e);
-            return new ArrayList <>();
-        }
-    }
-
     public List <AccuWeatherLeskoDto> getWeatherLesko() {
 
         URI url = UriComponentsBuilder.fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationLesko())
@@ -84,6 +66,24 @@ public class AccuweatherClient {
         try {
             AccuWeatherKroscienkoDto[] accuResponse = restTemplate.getForObject(url, AccuWeatherKroscienkoDto[].class);
             return Arrays.asList(ofNullable(accuResponse).orElse(new AccuWeatherKroscienkoDto[0]));
+        } catch (RestClientException e) {
+            LOGGER.error(e.getMessage(), e);
+            return new ArrayList <>();
+        }
+    }
+
+    public List <AccuweatherGolkowiceDto> getWeatherGolkowice() {
+
+        URI url = UriComponentsBuilder.fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationGolkowice())
+                .queryParam("apikey", accuweatherConfig.getAccuweatherAppKey())
+                .queryParam("language", accuweatherConfig.getAccuweatherApiLanguage())
+                .build()
+                .encode()
+                .toUri();
+
+        try {
+            AccuweatherGolkowiceDto[] accuResponse = restTemplate.getForObject(url, AccuweatherGolkowiceDto[].class);
+            return Arrays.asList(ofNullable(accuResponse).orElse(new AccuweatherGolkowiceDto[0]));
         } catch (RestClientException e) {
             LOGGER.error(e.getMessage(), e);
             return new ArrayList <>();

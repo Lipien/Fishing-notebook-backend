@@ -14,4 +14,14 @@ public class AccuMetricLeskoDto {
 
     @JsonProperty("Value")
     private double valueDto;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AccuMetricLeskoDto that = (AccuMetricLeskoDto) o;
+
+        return Double.compare(that.getValueDto(), getValueDto()) == 0;
+    }
 }

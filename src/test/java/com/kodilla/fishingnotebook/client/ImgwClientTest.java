@@ -61,8 +61,6 @@ public class ImgwClientTest {
         // Given
         URI url = new URI("http://test.com");
 
-        when(restTemplate.getForObject(url, ImgwDto[].class)).thenReturn(null);
-
         //When
         List <ImgwDto> fetchedImgwHydroStations = imgwClient.getImgwStations();
 
