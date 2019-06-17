@@ -7,8 +7,11 @@ import com.kodilla.fishingnotebook.domain.accuweather.lesko.AccuWeatherLeskoDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -17,11 +20,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static java.util.Optional.ofNullable;
+
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Component
 public class AccuweatherClient {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(AccuweatherClient.class);
 
     @Autowired
     private RestTemplate restTemplate;
@@ -38,13 +45,13 @@ public class AccuweatherClient {
                 .encode()
                 .toUri();
 
-        AccuweatherGolkowiceDto[] accuResponse = restTemplate.getForObject(url,
-                AccuweatherGolkowiceDto[].class);
-
-        if (accuResponse != null) {
-            return Arrays.asList(accuResponse);
+        try {
+            AccuweatherGolkowiceDto[] accuResponse = restTemplate.getForObject(url, AccuweatherGolkowiceDto[].class);
+            return Arrays.asList(ofNullable(accuResponse).orElse(new AccuweatherGolkowiceDto[0]));
+        } catch (RestClientException e) {
+            LOGGER.error(e.getMessage(), e);
+            return new ArrayList <>();
         }
-        return new ArrayList <>();
     }
 
     public List <AccuWeatherLeskoDto> getWeatherLesko() {
@@ -56,13 +63,13 @@ public class AccuweatherClient {
                 .encode()
                 .toUri();
 
-        AccuWeatherLeskoDto[] accuResponse = restTemplate.getForObject(url,
-                AccuWeatherLeskoDto[].class);
-
-        if (accuResponse != null) {
-            return Arrays.asList(accuResponse);
+        try {
+            AccuWeatherLeskoDto[] accuResponse = restTemplate.getForObject(url, AccuWeatherLeskoDto[].class);
+            return Arrays.asList(ofNullable(accuResponse).orElse(new AccuWeatherLeskoDto[0]));
+        } catch (RestClientException e) {
+            LOGGER.error(e.getMessage(), e);
+            return new ArrayList <>();
         }
-        return new ArrayList <>();
     }
 
     public List <AccuWeatherKroscienkoDto> getWeatherKroscienko() {
@@ -74,12 +81,13 @@ public class AccuweatherClient {
                 .encode()
                 .toUri();
 
-        AccuWeatherKroscienkoDto[] accuResponse = restTemplate.getForObject(url,
-                AccuWeatherKroscienkoDto[].class);
-
-        if (accuResponse != null) {
-            return Arrays.asList(accuResponse);
+        try {
+            AccuWeatherKroscienkoDto[] accuResponse = restTemplate.getForObject(url, AccuWeatherKroscienkoDto[].class);
+            return Arrays.asList(ofNullable(accuResponse).orElse(new AccuWeatherKroscienkoDto[0]));
+        } catch (RestClientException e) {
+            LOGGER.error(e.getMessage(), e);
+            return new ArrayList <>();
         }
-        return new ArrayList <>();
     }
 }
+
