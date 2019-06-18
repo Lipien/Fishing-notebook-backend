@@ -18,7 +18,7 @@ public class DunajecKroscienkoRegistry {
     private Long id;
 
     @Column(name = "catch_date")
-    private LocalDate catchDate;
+    private String catchDate;
 
     @Column(name = "fish_type")
     private String fishType;

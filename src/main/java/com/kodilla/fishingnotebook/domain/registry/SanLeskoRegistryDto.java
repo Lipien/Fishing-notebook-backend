@@ -13,7 +13,7 @@ public class SanLeskoRegistryDto {
 
     private Long id;
 
-    private LocalDate catchDate;
+    private String catchDate;
 
     private String fishType;
 

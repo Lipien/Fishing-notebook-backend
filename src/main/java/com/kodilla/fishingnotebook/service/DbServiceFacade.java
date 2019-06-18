@@ -23,7 +23,7 @@ public class DbServiceFacade {
                 " weather conditions: " + dbService.getDunajecKroscienkoWeather() + ".");
 
         report.add("Dunajec Gołkowice water level: " + dbService.getDunajecGolkowiceWaterLevel() + "cm;" +
-                " weather conditions: " + dbService.getDunajecKroscienkoWeather() + ".");
+                " weather conditions: " + dbService.getDunajecGolkowiceWeather() + ".");
 
         return report;
     }
