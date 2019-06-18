@@ -37,7 +37,7 @@ public class HydroAndWeatherControllerTest {
         when(dbServiceFacade.getWeatherAndHydroReport()).thenReturn(reportLesko);
 
         //When & Then
-        mockMvc.perform((get("/v1/report/getFishingCondistionsReport").contentType(MediaType.APPLICATION_JSON)))
+        mockMvc.perform((get("/v1/report/getFishingConditionsReport").contentType(MediaType.APPLICATION_JSON)))
                 .andExpect(status().is(200))
                 .andExpect(jsonPath("$", hasSize(1)));
     }

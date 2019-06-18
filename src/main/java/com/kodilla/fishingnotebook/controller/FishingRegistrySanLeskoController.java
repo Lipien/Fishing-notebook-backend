@@ -19,22 +19,22 @@ public class FishingRegistrySanLeskoController {
     @Autowired
     private FishingRegistrySanLeskoMapper fishingRegistrySanLeskoMapper;
 
-    @GetMapping(value = "getSanLeskoRegistry")
+    @GetMapping("/getSanLeskoRegistry")
     public List <SanLeskoRegistry> getSanLeskoRegistry() {
         return dbServiceFishingRegistrySanLeskoRepository.getAllFish();
     }
 
-    @PostMapping(value = "createSanLeskoRegistry")
+    @PostMapping("/createSanLeskoRegistry")
     public void createSanLeskoRegistry(@RequestBody SanLeskoRegistryDto sanLeskoRegistryDto) {
         dbServiceFishingRegistrySanLeskoRepository.saveFish(fishingRegistrySanLeskoMapper.mapToSanLesko(sanLeskoRegistryDto));
     }
 
-    @DeleteMapping(value = "deleteSanLeskoRegistry")
+    @DeleteMapping("/deleteSanLeskoRegistry")
     public void deleteSanLeskoRegistry(@RequestParam Long id) {
         dbServiceFishingRegistrySanLeskoRepository.deleteFish(id);
     }
 
-    @PutMapping(value = "updateSanLeskoRegistry")
+    @PutMapping("/updateSanLeskoRegistry")
     public SanLeskoRegistryDto updateSanLeskoRegistry(@RequestBody SanLeskoRegistryDto sanLeskoRegistryDto) {
         return fishingRegistrySanLeskoMapper.mapToSanLeskoDto(dbServiceFishingRegistrySanLeskoRepository.updateFish(fishingRegistrySanLeskoMapper.mapToSanLesko(sanLeskoRegistryDto)));
     }

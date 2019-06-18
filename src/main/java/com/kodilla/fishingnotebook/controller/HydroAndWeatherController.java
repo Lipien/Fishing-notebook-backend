@@ -15,8 +15,8 @@ public class HydroAndWeatherController {
     @Autowired
     private DbServiceFacade dbServiceFacade;
 
-    @GetMapping(value = "getFishingCondistionsReport")
-    public List <String> getFishingCondistionsReport() {
+    @GetMapping(value = "getFishingConditionsReport")
+    public List <String> getFishingConditionsReport() {
         return dbServiceFacade.getWeatherAndHydroReport();
     }
 }

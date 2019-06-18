@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.transaction.Transactional;
 import java.time.LocalDate;
 
 @AllArgsConstructor

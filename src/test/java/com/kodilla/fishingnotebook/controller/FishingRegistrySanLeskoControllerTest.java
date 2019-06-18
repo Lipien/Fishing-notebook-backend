@@ -1,6 +1,8 @@
 package com.kodilla.fishingnotebook.controller;
 
+import com.google.gson.Gson;
 import com.kodilla.fishingnotebook.domain.registry.SanLeskoRegistry;
+import com.kodilla.fishingnotebook.domain.registry.SanLeskoRegistryDto;
 import com.kodilla.fishingnotebook.mapper.registry.FishingRegistrySanLeskoMapper;
 import com.kodilla.fishingnotebook.service.DbServiceFishingRegistrySanLeskoRepository;
 import org.junit.Test;
@@ -16,9 +18,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.Matchers.hasSize;
-import static org.junit.Assert.*;
+import static org.hamcrest.Matchers.is;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.mockito.internal.verification.VerificationModeFactory.times;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -63,14 +68,57 @@ public class FishingRegistrySanLeskoControllerTest {
     }
 
     @Test
-    public void createSanLeskoRegistry() {
+    public void createSanLeskoRegistry() throws Exception {
+        //Given
+        SanLeskoRegistryDto sanLeskoRegistryDto = new SanLeskoRegistryDto(11L, "18-06-2019", "trout", "34cm", "1");
+        SanLeskoRegistry sanLeskoRegistry = new SanLeskoRegistry(11L, "18-06-2019", "trout", "34cm", "1");
+
+        when(dbServiceFishingRegistrySanLeskoRepository.saveFish(any(SanLeskoRegistry.class))).thenReturn(sanLeskoRegistry);
+        when(fishingRegistrySanLeskoMapper.mapToSanLesko(any(SanLeskoRegistryDto.class))).thenReturn(sanLeskoRegistry);
+
+        Gson gson = new Gson();
+        String jsonContent = gson.toJson(sanLeskoRegistryDto);
+
+        //When & Then
+        mockMvc.perform(post("/v1/registry/createSanLeskoRegistry")
+                .contentType(MediaType.APPLICATION_JSON)
+                .characterEncoding("UTF-8")
+                .content(jsonContent))
+                .andExpect(status().isOk());
+        verify(dbServiceFishingRegistrySanLeskoRepository, times(1)).saveFish(any(SanLeskoRegistry.class));
     }
 
     @Test
-    public void deleteSanLeskoRegistry() {
+    public void deleteSanLeskoRegistry() throws Exception {
+        //When & Then
+        mockMvc.perform(delete("/v1/registry/deleteSanLeskoRegistry?id=12")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
     }
 
     @Test
-    public void updateSanLeskoRegistry() {
+    public void updateSanLeskoRegistry() throws Exception {
+        //Given
+        SanLeskoRegistryDto sanLeskoRegistryDto = new SanLeskoRegistryDto(11L, "18-06-2019", "trout", "34cm", "1");
+        SanLeskoRegistry sanLeskoRegistry = new SanLeskoRegistry(11L, "18-06-2019", "trout", "34cm", "1");
+
+        when(dbServiceFishingRegistrySanLeskoRepository.updateFish(any(SanLeskoRegistry.class))).thenReturn(sanLeskoRegistry);
+        when(fishingRegistrySanLeskoMapper.mapToSanLeskoDto(any(SanLeskoRegistry.class))).thenReturn(sanLeskoRegistryDto);
+        when(fishingRegistrySanLeskoMapper.mapToSanLesko(any(SanLeskoRegistryDto.class))).thenReturn(sanLeskoRegistry);
+
+        Gson gson = new Gson();
+        String jsonContent = gson.toJson(sanLeskoRegistryDto);
+
+        //When & Then
+        mockMvc.perform(put("/v1/registry/updateSanLeskoRegistry")
+                .contentType(MediaType.APPLICATION_JSON)
+                .characterEncoding("UTF-8")
+                .content(jsonContent))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id", is(11)))
+                .andExpect(jsonPath("$.catchDate", is("18-06-2019")))
+                .andExpect(jsonPath("$.fishType", is("trout")))
+                .andExpect(jsonPath("$.length", is("34cm")))
+                .andExpect(jsonPath("$.qty", is("1")));
     }
 }
