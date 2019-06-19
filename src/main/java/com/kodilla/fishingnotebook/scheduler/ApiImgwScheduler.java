@@ -10,7 +10,7 @@ public class ApiImgwScheduler {
     @Autowired
     private HttpGetRequesToApi httpGetRequesToApi;
 
-    //@Scheduled(fixedDelay = 60000)
+    @Scheduled(fixedDelay = 3600000)
     public void sendGet() throws Exception {
         httpGetRequesToApi.sendGetToImgw();
         httpGetRequesToApi.sendGetToAccuweatherLesko();
