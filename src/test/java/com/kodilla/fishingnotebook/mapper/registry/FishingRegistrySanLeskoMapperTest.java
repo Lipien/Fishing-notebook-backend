@@ -37,13 +37,13 @@ public class FishingRegistrySanLeskoMapperTest {
         SanLeskoRegistryDto sanLeskoRegistryDto = new SanLeskoRegistryDto(1L, "catchDate", "fishType", "length", "qty");
 
         //When
-        SanLeskoRegistry resultinSanLeskoRegistry = fishingRegistrySanLeskoMapper.mapToSanLesko(sanLeskoRegistryDto);
+        SanLeskoRegistry resultingSanLeskoRegistry = fishingRegistrySanLeskoMapper.mapToSanLesko(sanLeskoRegistryDto);
 
         //Then
-        assertEquals(sanLeskoRegistryDto.getId(), resultinSanLeskoRegistry.getId());
-        assertEquals(sanLeskoRegistryDto.getCatchDate(), resultinSanLeskoRegistry.getCatchDate());
-        assertEquals(sanLeskoRegistryDto.getFishType(), resultinSanLeskoRegistry.getFishType());
-        assertEquals(sanLeskoRegistryDto.getLength(), resultinSanLeskoRegistry.getLength());
-        assertEquals(sanLeskoRegistryDto.getQty(), resultinSanLeskoRegistry.getQty());
+        assertEquals(sanLeskoRegistryDto.getId(), resultingSanLeskoRegistry.getId());
+        assertEquals(sanLeskoRegistryDto.getCatchDate(), resultingSanLeskoRegistry.getCatchDate());
+        assertEquals(sanLeskoRegistryDto.getFishType(), resultingSanLeskoRegistry.getFishType());
+        assertEquals(sanLeskoRegistryDto.getLength(), resultingSanLeskoRegistry.getLength());
+        assertEquals(sanLeskoRegistryDto.getQty(), resultingSanLeskoRegistry.getQty());
     }
 }
