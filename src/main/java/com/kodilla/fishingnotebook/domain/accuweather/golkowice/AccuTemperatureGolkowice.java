@@ -15,4 +15,14 @@ public class AccuTemperatureGolkowice {
 
     @Embedded
     private AccuMetricGolkowice accuMetricGolkowice;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AccuTemperatureGolkowice that = (AccuTemperatureGolkowice) o;
+
+        return getAccuMetricGolkowice().equals(that.getAccuMetricGolkowice());
+    }
 }

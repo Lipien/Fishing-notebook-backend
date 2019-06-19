@@ -12,4 +12,14 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class AccuMetricGolkowice {
     private double value;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AccuMetricGolkowice that = (AccuMetricGolkowice) o;
+
+        return Double.compare(that.getValue(), getValue()) == 0;
+    }
 }

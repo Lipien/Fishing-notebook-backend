@@ -28,6 +28,16 @@ public class AccuweatherGolkowice {
     @Embedded
     @Column(name = "Temperature")
     public AccuTemperatureGolkowice temperature;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AccuweatherGolkowice that = (AccuweatherGolkowice) o;
+
+        return getTemperature().equals(that.getTemperature());
+    }
 }
 
 
