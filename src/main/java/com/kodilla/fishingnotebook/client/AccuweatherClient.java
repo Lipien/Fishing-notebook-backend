@@ -36,17 +36,11 @@ public class AccuweatherClient {
     @Autowired
     private AccuweatherConfig accuweatherConfig;
 
-    private String apikey ="apikey";
-
-    private String language = "language";
-
-
-
     public List <AccuWeatherLeskoDto> getWeatherLesko() {
 
         URI url = UriComponentsBuilder.fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationLesko())
-                .queryParam(apikey, accuweatherConfig.getAccuweatherAppKey())
-                .queryParam(language, accuweatherConfig.getAccuweatherApiLanguage())
+                .queryParam("apikey", accuweatherConfig.getAccuweatherAppKey())
+                .queryParam("language", accuweatherConfig.getAccuweatherApiLanguage())
                 .build()
                 .encode()
                 .toUri();
@@ -63,8 +57,8 @@ public class AccuweatherClient {
     public List <AccuWeatherKroscienkoDto> getWeatherKroscienko() {
 
         URI url = UriComponentsBuilder.fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationKroscienko())
-                .queryParam(apikey, accuweatherConfig.getAccuweatherAppKey())
-                .queryParam(language, accuweatherConfig.getAccuweatherApiLanguage())
+                .queryParam("apikey", accuweatherConfig.getAccuweatherAppKey())
+                .queryParam("language", accuweatherConfig.getAccuweatherApiLanguage())
                 .build()
                 .encode()
                 .toUri();
@@ -81,8 +75,8 @@ public class AccuweatherClient {
     public List <AccuweatherGolkowiceDto> getWeatherGolkowice() {
 
         URI url = UriComponentsBuilder.fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationGolkowice())
-                .queryParam(apikey, accuweatherConfig.getAccuweatherAppKey())
-                .queryParam(language, accuweatherConfig.getAccuweatherApiLanguage())
+                .queryParam("apikey", accuweatherConfig.getAccuweatherAppKey())
+                .queryParam("language", accuweatherConfig.getAccuweatherApiLanguage())
                 .build()
                 .encode()
                 .toUri();
