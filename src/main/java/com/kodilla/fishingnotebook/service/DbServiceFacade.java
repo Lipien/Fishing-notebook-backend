@@ -15,15 +15,16 @@ public class DbServiceFacade {
     public List <String> getWeatherAndHydroReport() {
 
         List <String> report = new ArrayList <>();
+        String conditions = " weather conditions: ";
 
         report.add("San Lesko water level: " + dbService.getSanLeskoWaterLevel() + "cm;" +
-                " weather conditions: " + dbService.getSanLeskoWeather() + ".");
+                conditions + dbService.getSanLeskoWeather() + ".");
 
         report.add("Dunajec Krościenko water level: " + dbService.getDunajecKroscienkoWaterLevel() + "cm;" +
-                " weather conditions: " + dbService.getDunajecKroscienkoWeather() + ".");
+                conditions + dbService.getDunajecKroscienkoWeather() + ".");
 
         report.add("Dunajec Gołkowice water level: " + dbService.getDunajecGolkowiceWaterLevel() + "cm;" +
-                " weather conditions: " + dbService.getDunajecGolkowiceWeather() + ".");
+                conditions + dbService.getDunajecGolkowiceWeather() + ".");
 
         return report;
     }

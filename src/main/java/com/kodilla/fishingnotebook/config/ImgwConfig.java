@@ -9,5 +9,5 @@ import org.springframework.stereotype.Component;
 public class ImgwConfig {
 
     @Value(value = "${imgw.api.endpoint.hydro}")
-    private String imgwApiEndpoint; //= "https://danepubliczne.imgw.pl/api/data/hydro/";
+    private String imgwApiEndpoint;
 }

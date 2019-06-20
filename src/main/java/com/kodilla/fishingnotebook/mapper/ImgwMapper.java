@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class ImgwMapper {
     public Imgw mapToImgw(final ImgwDto imgwDto) {
         return new Imgw(
-                imgwDto.getId_stacji(),
+                imgwDto.getIdStacji(),
                 imgwDto.getStacja(),
                 imgwDto.getRzeka(),
                 imgwDto.getStanWody(),

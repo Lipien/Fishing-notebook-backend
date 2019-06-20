@@ -49,7 +49,7 @@ public class ImgwClientTest {
 
         //Then
         assertEquals(1, fetchedImgwHydroStations.size());
-        assertEquals("test_Id", fetchedImgwHydroStations.get(0).getId_stacji());
+        assertEquals("test_Id", fetchedImgwHydroStations.get(0).getIdStacji());
         assertEquals("test_Station", fetchedImgwHydroStations.get(0).getStacja());
         assertEquals("test_River", fetchedImgwHydroStations.get(0).getRzeka());
         assertEquals("test_Water_Level", fetchedImgwHydroStations.get(0).getStanWody());

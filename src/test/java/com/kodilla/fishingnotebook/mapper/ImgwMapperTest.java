@@ -24,7 +24,7 @@ public class ImgwMapperTest {
         Imgw imgwResult = imgwMapper.mapToImgw(imgwDto);
 
         //Then
-        assertEquals(imgwDto.getId_stacji(), imgwResult.getId_stacji());
+        assertEquals(imgwDto.getIdStacji(), imgwResult.getIdStacji());
         assertEquals(imgwDto.getStacja(), imgwResult.getStacja());
         assertEquals(imgwDto.getRzeka(), imgwResult.getRzeka());
         assertEquals(imgwDto.getStanWody(), imgwResult.getStanWody());

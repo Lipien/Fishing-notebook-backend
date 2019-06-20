@@ -4,9 +4,9 @@ import com.kodilla.fishingnotebook.domain.accuweather.golkowice.AccuweatherGolko
 import com.kodilla.fishingnotebook.domain.imgw.Imgw;
 import com.kodilla.fishingnotebook.domain.accuweather.kroscienko.AccuWeatherKroscienko;
 import com.kodilla.fishingnotebook.domain.accuweather.lesko.AccuWeatherLesko;
-import com.kodilla.fishingnotebook.repository.weatherRepositories.AccuWeatherRepositoryGolkowice;
-import com.kodilla.fishingnotebook.repository.weatherRepositories.AccuWeatherRepositoryLesko;
-import com.kodilla.fishingnotebook.repository.weatherRepositories.AccuweatherRepositoryKroscienko;
+import com.kodilla.fishingnotebook.repository.weatherrepositories.AccuWeatherRepositoryGolkowice;
+import com.kodilla.fishingnotebook.repository.weatherrepositories.AccuWeatherRepositoryLesko;
+import com.kodilla.fishingnotebook.repository.weatherrepositories.AccuweatherRepositoryKroscienko;
 import com.kodilla.fishingnotebook.repository.ImgwRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

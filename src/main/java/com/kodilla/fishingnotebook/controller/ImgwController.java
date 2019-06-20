@@ -33,7 +33,7 @@ public class ImgwController {
 
         List <ImgwDto> hydroData = imgwClient.getImgwStations();
 
-        hydroData.forEach((temp) ->
+        hydroData.forEach(temp ->
                 dbService.saveImgwStations(imgwMapper.mapToImgw(temp)));
     }
 }

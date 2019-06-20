@@ -1,7 +1,7 @@
 package com.kodilla.fishingnotebook.service;
 
 import com.kodilla.fishingnotebook.domain.registry.DunajecKroscienkoRegistry;
-import com.kodilla.fishingnotebook.repository.registryRepositories.RegistryDunajecKroscienkoRepository;
+import com.kodilla.fishingnotebook.repository.registryrepositories.RegistryDunajecKroscienkoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

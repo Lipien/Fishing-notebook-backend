@@ -1,4 +1,4 @@
-package com.kodilla.fishingnotebook.repository.weatherRepositories;
+package com.kodilla.fishingnotebook.repository.weatherrepositories;
 
 import com.kodilla.fishingnotebook.domain.accuweather.kroscienko.AccuWeatherKroscienko;
 import org.springframework.data.jpa.repository.Modifying;

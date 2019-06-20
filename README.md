@@ -3,6 +3,7 @@ Backend of an application that combines fishing weather status dashboard and fis
 - connects automatically (time interval set on one hour) to meteorogical APIs: IMGW (rivers water levels) and Accuweather (current weather data from chosen stations)
 - stores the data in MySQL database
 - shares the weather & hydro information through "hydro-and-weather-controller" endpoint
+(Swagger screenshot): https://1drv.ms/u/s!Alk4lPJiK05Jg-EV-XTDBiymSLz8kQ
 - offers write & read fishing register functionality through "fishing-registry" enpoints
 
 ### Techical information and system requirements

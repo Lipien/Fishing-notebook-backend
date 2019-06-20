@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class ImgwDto {
 
     @JsonProperty("id_stacji")
-    private String id_stacji;
+    private String idStacji;
 
     @JsonProperty("stacja")
     private String stacja;

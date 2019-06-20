@@ -39,7 +39,7 @@ public class AccuweatherController {
 
         List <AccuweatherGolkowiceDto> weatherData = accuweatherClient.getWeatherGolkowice();
 
-        weatherData.forEach((temp) ->
+        weatherData.forEach(temp ->
                 dbService.saveAccuWeather(accuweatherMapperGolkowice.mapToAccuweather(temp)));
     }
 
@@ -48,7 +48,7 @@ public class AccuweatherController {
 
         List <AccuWeatherLeskoDto> weatherData = accuweatherClient.getWeatherLesko();
 
-        weatherData.forEach((temp) ->
+        weatherData.forEach(temp ->
                 dbService.saveAccuWeatherLesko(accuweatherMapperLesko.mapToAccuweatherLesko(temp)));
     }
 
@@ -57,7 +57,7 @@ public class AccuweatherController {
 
         List <AccuWeatherKroscienkoDto> weatherData = accuweatherClient.getWeatherKroscienko();
 
-        weatherData.forEach((temp) ->
+        weatherData.forEach(temp ->
                 dbService.saveAccuWeatherKroscienko(accuweatherMapperKroscienko.mapToAccuweatherKroscienko(temp)));
     }
 }

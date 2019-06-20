@@ -1,4 +1,4 @@
-package com.kodilla.fishingnotebook.repository.registryRepositories;
+package com.kodilla.fishingnotebook.repository.registryrepositories;
 
 import com.kodilla.fishingnotebook.domain.registry.DunajecKroscienkoRegistry;
 import org.springframework.data.repository.CrudRepository;

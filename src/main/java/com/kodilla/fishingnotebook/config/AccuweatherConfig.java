@@ -9,20 +9,20 @@ import org.springframework.stereotype.Component;
 public class AccuweatherConfig {
 
    @Value("${accuweather.api.prod}")
-    private String accuweatherApiEndpoint;// = "http://dataservice.accuweather.com/currentconditions/v1/";
+    private String accuweatherApiEndpoint;
 
     @Value("${accuweather.api.key}")
-    private String accuweatherAppKey;  //= "Bx3XRoUI6nyFsvoFMmOE62ijlUbJOMsl";
+    private String accuweatherAppKey;
 
     @Value("${accuweather.api.language}")
-    private String accuweatherApiLanguage; // = "en-us";
+    private String accuweatherApiLanguage;
 
     @Value("${accuweather.api.station.dunajec.kroscienko}")
-    private String accuweatherStationKroscienko; // = "268277";
+    private String accuweatherStationKroscienko;
 
     @Value("${accuweather.api.station.dunajec.golkowice}")
-    private String accuweatherStationGolkowice; // = "2718104";
+    private String accuweatherStationGolkowice;
 
     @Value("${accuweather.api.station.san.lesko}")
-    private String accuweatherStationLesko; // = "1400917";
+    private String accuweatherStationLesko;
 }

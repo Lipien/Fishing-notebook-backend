@@ -14,7 +14,7 @@ public class Imgw {
 
     @Id
     @Column(name = "id_stacji")
-    private String id_stacji;
+    private String idStacji;
 
     @Column(name = "stacja")
     private String stacja;
