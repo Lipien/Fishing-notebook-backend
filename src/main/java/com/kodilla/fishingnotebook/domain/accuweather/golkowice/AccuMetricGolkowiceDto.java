@@ -24,4 +24,9 @@ public class AccuMetricGolkowiceDto {
 
         return Double.compare(that.getValueDto(), getValueDto()) == 0;
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

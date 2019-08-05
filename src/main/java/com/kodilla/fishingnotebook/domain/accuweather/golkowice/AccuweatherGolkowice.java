@@ -38,6 +38,11 @@ public class AccuweatherGolkowice {
 
         return getTemperature().equals(that.getTemperature());
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }
 
 

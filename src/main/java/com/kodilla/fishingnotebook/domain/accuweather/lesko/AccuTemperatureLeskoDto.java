@@ -24,4 +24,9 @@ public class AccuTemperatureLeskoDto {
 
         return getAccuMetricDto().equals(that.getAccuMetricDto());
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

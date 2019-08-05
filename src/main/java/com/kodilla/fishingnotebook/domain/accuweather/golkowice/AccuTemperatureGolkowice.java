@@ -25,4 +25,9 @@ public class AccuTemperatureGolkowice {
 
         return getAccuMetricGolkowice().equals(that.getAccuMetricGolkowice());
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

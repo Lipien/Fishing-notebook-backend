@@ -37,4 +37,9 @@ public class AccuweatherGolkowiceDto {
 
         return getAccuTemperatureGolkowiceDto().equals(that.getAccuTemperatureGolkowiceDto());
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

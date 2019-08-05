@@ -37,4 +37,9 @@ public class AccuWeatherKroscienkoDto {
 
         return getAccuTemperatureDto().equals(that.getAccuTemperatureDto());
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }
