@@ -58,10 +58,7 @@ public class ImgwClientTest {
 
     @Test
     public void shouldReturnEmptyList() throws URISyntaxException {
-        // Given
-        URI url = new URI("http://test.com");
-
-        //When
+        //Given & When
         List <ImgwDto> fetchedImgwHydroStations = imgwClient.getImgwStations();
 
         //Then
