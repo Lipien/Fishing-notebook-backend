@@ -15,6 +15,7 @@ public interface AccuweatherRepositoryKroscienko extends CrudRepository <AccuWea
 
     List <AccuWeatherKroscienko> save(List <AccuWeatherKroscienko> accuweathers);
 
+    @Modifying
     @Transactional
     @Query("delete from accuweather_kroscienko")
     void deleteAllWithQuery();

@@ -15,6 +15,7 @@ public interface AccuWeatherRepositoryLesko extends CrudRepository <AccuWeatherL
 
     List <AccuWeatherLesko> save(List <AccuWeatherLesko> accuweathersLesko);
 
+    @Modifying
     @Transactional
     @Query("delete from accuweather_lesko")
     void deleteAllWithQuery();

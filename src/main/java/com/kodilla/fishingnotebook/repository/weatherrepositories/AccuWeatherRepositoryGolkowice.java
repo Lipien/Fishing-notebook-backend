@@ -15,6 +15,7 @@ public interface AccuWeatherRepositoryGolkowice extends CrudRepository <Accuweat
 
     List <AccuweatherGolkowice> save(List <AccuweatherGolkowice> accuweatherGolkowices);
 
+    @Modifying
     @Transactional
     @Query("delete from accuweather_golkowice")
     void deleteAllWithQuery();
