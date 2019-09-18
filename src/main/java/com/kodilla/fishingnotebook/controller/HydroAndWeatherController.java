@@ -1,6 +1,5 @@
 package com.kodilla.fishingnotebook.controller;
 
-import com.kodilla.fishingnotebook.service.DbService;
 import com.kodilla.fishingnotebook.service.DbServiceFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
