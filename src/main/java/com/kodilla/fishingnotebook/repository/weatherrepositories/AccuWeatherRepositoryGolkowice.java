@@ -20,6 +20,6 @@ public interface AccuWeatherRepositoryGolkowice extends CrudRepository <Accuweat
     @Query("delete from accuweather_golkowice")
     void deleteAllWithQuery();
 
-    @Query(value = "SELECT local_observation_date_time, has_precipitation, value, weather_text FROM hydro_imgw.accuweather_golkowice", nativeQuery = true)
+    @Query(value = "SELECT local_observation_date_time, has_precipitation, value, weather_text FROM accuweather_golkowice", nativeQuery = true)
     String retrieveDunajecGolkowiceWeather();
 }

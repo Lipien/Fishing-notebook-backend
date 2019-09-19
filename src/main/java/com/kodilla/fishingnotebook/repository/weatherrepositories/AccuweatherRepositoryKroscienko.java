@@ -20,6 +20,6 @@ public interface AccuweatherRepositoryKroscienko extends CrudRepository <AccuWea
     @Query("delete from accuweather_kroscienko")
     void deleteAllWithQuery();
 
-    @Query(value = "SELECT local_observation_date_time, has_precipitation, value, weather_text FROM hydro_imgw.accuweather_kroscienko", nativeQuery = true)
+    @Query(value = "SELECT local_observation_date_time, has_precipitation, value, weather_text FROM accuweather_kroscienko", nativeQuery = true)
     String retrieveDunajecKroscienkoWeather();
 }

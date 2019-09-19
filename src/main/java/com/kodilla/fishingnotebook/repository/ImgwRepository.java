@@ -14,12 +14,12 @@ public interface ImgwRepository extends CrudRepository <Imgw, String> {
 
     List <Imgw> save(List <Imgw> imgw);
 
-    @Query(value = "SELECT stan_wody FROM hydro_imgw.waterstations WHERE id_stacji = 149220060", nativeQuery = true)
+    @Query(value = "SELECT stan_wody FROM waterstations WHERE id_stacji = 149220060", nativeQuery = true)
     String retrieveSanLeskoWaterLevel();
 
-    @Query(value = "SELECT stan_wody FROM hydro_imgw.waterstations WHERE id_stacji = 149200160", nativeQuery = true)
+    @Query(value = "SELECT stan_wody FROM waterstations WHERE id_stacji = 149200160", nativeQuery = true)
     String retrieveDunajecKroscienkoWaterLevel();
 
-    @Query(value = "SELECT stan_wody FROM hydro_imgw.waterstations WHERE id_stacji = 149200190", nativeQuery = true)
+    @Query(value = "SELECT stan_wody FROM waterstations WHERE id_stacji = 149200190", nativeQuery = true)
     String retrieveDunajecGolkowiceWaterLevel();
 }

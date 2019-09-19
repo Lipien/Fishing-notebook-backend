@@ -20,6 +20,6 @@ public interface AccuWeatherRepositoryLesko extends CrudRepository <AccuWeatherL
     @Query("delete from accuweather_lesko")
     void deleteAllWithQuery();
 
-    @Query(value = "SELECT local_observation_date_time, has_precipitation, value, weather_text FROM hydro_imgw.accuweather_lesko", nativeQuery = true)
+    @Query(value = "SELECT local_observation_date_time, has_precipitation, value, weather_text FROM accuweather_lesko", nativeQuery = true)
     String retrieveSanLeskoWeather();
 }
