@@ -2,9 +2,9 @@
 Backend of an application that combines fishing weather status dashboard and fishing registry for chosen river sections:
 - connects automatically (time interval set on one hour) to meteorological APIs: IMGW (rivers water levels) and Accuweather (current weather data from chosen stations)
 - stores the data in MySQL database
-- shares the weather & hydro information through "hydro-and-weather-controller" endpoint:
-  -> (Swagger screenshot): https://1drv.ms/u/s!Alk4lPJiK05Jg-EV-XTDBiymSLz8kQ
-  -> <b>HEROKU: https://fishing-notebook.herokuapp.com/v1/report/getFishingConditionsReport< /b>
+- shares the weather & hydro information through "hydro-and-weather-controller" endpoint:<br>
+  -> (Swagger screenshot): https://1drv.ms/u/s!Alk4lPJiK05Jg-EV-XTDBiymSLz8kQ <br>
+  -> <b>HEROKU: https://fishing-notebook.herokuapp.com/v1/report/getFishingConditionsReport </b>
 - offers write & read fishing register functionality through "fishing-registry" endpoints
 
 ### Techical information and system requirements
