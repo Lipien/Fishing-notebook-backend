@@ -17,7 +17,7 @@ public class HttpGetRequesToApi {
     private String browser = "Mozilla/5.0";
 
     public void sendGetToImgw() throws Exception {
-        String url = "https://fishing-notebook.herokuapp.com/v1/hydro/getImgw";
+        String url = "http://localhost:8080/v1/hydro/getImgw";
         URL obj = new URL(url);
         HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
         connection.setRequestMethod("GET");
@@ -28,7 +28,7 @@ public class HttpGetRequesToApi {
     }
 
     public void sendGetToAccuweatherLesko() throws Exception {
-        String url = "https://fishing-notebook.herokuapp.com/v1/accuweather/getWeatherLesko";
+        String url = "http://localhost:8080/v1/accuweather/getWeatherLesko";
         URL obj = new URL(url);
         HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
         connection.setRequestMethod("GET");
@@ -39,7 +39,7 @@ public class HttpGetRequesToApi {
     }
 
     public void sendGetToAccuweatherKroscienko() throws Exception {
-        String url = "https://fishing-notebook.herokuapp.com/v1/accuweather/getWeatherKroscienko";
+        String url = "http://localhost:8080/v1/accuweather/getWeatherKroscienko";
         URL obj = new URL(url);
         HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
         connection.setRequestMethod("GET");
@@ -50,7 +50,7 @@ public class HttpGetRequesToApi {
     }
 
     public void sendGetToAccuweatherGolkowice() throws Exception {
-        String url = "https://fishing-notebook.herokuapp.com/v1/accuweather/getWeatherGolkowice";
+        String url = "http://localhost:8080/v1/accuweather/getWeatherGolkowice";
         URL obj = new URL(url);
         HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
         connection.setRequestMethod("GET");
