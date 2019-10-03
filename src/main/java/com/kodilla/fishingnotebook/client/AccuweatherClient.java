@@ -38,7 +38,8 @@ public class AccuweatherClient {
 
     public List <AccuWeatherLeskoDto> getWeatherLesko() {
 
-        URI url = UriComponentsBuilder.fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationLesko())
+        URI url = UriComponentsBuilder
+                .fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationLesko())
                 .queryParam("apikey", accuweatherConfig.getAccuweatherAppKey())
                 .queryParam("language", accuweatherConfig.getAccuweatherApiLanguage())
                 .build()
@@ -56,7 +57,8 @@ public class AccuweatherClient {
 
     public List <AccuWeatherKroscienkoDto> getWeatherKroscienko() {
 
-        URI url = UriComponentsBuilder.fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationKroscienko())
+        URI url = UriComponentsBuilder
+                .fromHttpUrl(accuweatherConfig.getAccuweatherApiEndpoint() + accuweatherConfig.getAccuweatherStationKroscienko())
                 .queryParam("apikey", accuweatherConfig.getAccuweatherAppKey())
                 .queryParam("language", accuweatherConfig.getAccuweatherApiLanguage())
                 .build()

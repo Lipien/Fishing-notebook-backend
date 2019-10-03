@@ -70,11 +70,8 @@ public class AccuweatherClientTest {
     }
 
     @Test
-    public void shouldReturnLeskoEmptyList() throws URISyntaxException {
-        // Given
-        URI url = new URI("http://test.com/test?apikey=test&language=test");
-
-        //When
+    public void shouldReturnLeskoEmptyList() {
+        //Given & When
         List <AccuWeatherLeskoDto> fetchedImgwHydroLesko = accuweatherClient.getWeatherLesko();
 
         //Then
@@ -108,10 +105,7 @@ public class AccuweatherClientTest {
 
     @Test
     public void shouldReturnKroscienkoEmptyList() throws URISyntaxException {
-        // Given
-        URI url = new URI("http://test.com/test?apikey=test&language=test");
-
-        //When
+        //Given & When
         List <AccuWeatherKroscienkoDto> fetchedImgwHydroKroscienko = accuweatherClient.getWeatherKroscienko();
 
         //Then
@@ -145,10 +139,7 @@ public class AccuweatherClientTest {
 
     @Test
     public void shouldReturnGolkowiceEmptyList() throws URISyntaxException {
-        // Given
-        URI url = new URI("http://test.com/test?apikey=test&language=test");
-
-        //When
+        //Given & When
         List <AccuweatherGolkowiceDto> fetchedImgwHydroGolkowice = accuweatherClient.getWeatherGolkowice();
 
         //Then
